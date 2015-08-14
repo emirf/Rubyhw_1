@@ -6,23 +6,26 @@ end
 
 americanize("Burgers & Hot Dogs ")
 
-# This is the second part of Problem #2 /////////////////////
+# This is the second part of Problem #1 /////////////////////
 
-def findthemax()
-  mynum = [3, 7, 5]
-  mynum.each do |this|
-    this = mynum.sort
-    puts this.last
-  end
+array = [3, 7, 5, 56, 9, 5]
+
+def findthemax(array)
+  a = array.sort
+  a.last
 end
-findthemax()
+p findthemax(array)
 
-# This is the third part of Problem #2 //////////////////////
+# This is the third part of Problem #1 //////////////////////
 
 def proteins()
-  a = [:meat, :legume, :poultry, :seafood]
-  b = ["beef", "beans", "chicken", "shrimp"]
-  puts "{#{a[1]}:'#{b[1]}'}"
+a = [:meat, :legume, :poultry, :seafood]
+b = ["beef", "beans", "chicken", "shrimp"]
+h = Hash.new
+  a.each_with_index do |i, v|
+    h[i] = b[v]
+  end
+  p h
 end
 proteins()
 
